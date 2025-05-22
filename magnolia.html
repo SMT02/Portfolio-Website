@@ -1,0 +1,112 @@
+<!-- Sean Tiner 2025 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sean Tiner Porfolio</title>
+        <link rel="icon" type="image/x-icon" href="img/ST Logo Round(no lines).png" />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <!-- Top navbar -->
+        <div class="topNav">
+            <div class="logoContainer">
+                <a href="index.html"><img src="img/ST Logo Round.png" width="250px"></a>
+            </div>
+
+            <div class="hamburgerContainer">
+                <a class="navHamburger"> 
+                    <span class="navHamburgerLine"></span>
+                    <span class="navHamburgerLine"></span>
+                    <span class="navHamburgerLine"></span>
+                </a>
+            </div>
+            <div class="navMenu" id="navMenu">
+                <ul>
+                  <li class="navMenuLink"><a href="index.html">Home</a></li>
+                  <li class="navMenuLinkActive"><a href="magnolia.html">Project: Magnolia</a></li>
+                  <li class="navMenuLink"><a href="elysian.html">Project: Elysian Furnishings</a></li>
+                  <li class="navMenuLink"><a href="mc.html">Project: Minecraft Cities</a></li>
+                  <li class="navMenuLink"><a href="desert wear.html">Project: Desert Wear</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Progress bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div> 
+
+        <!-- Splash image -->
+        <div class="splashImageContainer">
+            <img class="splashImageMagnolia" src="img/Magnolia Logo2.png">
+        </div>
+
+        <!-- Project card -->
+        <div class="mainContent">
+            <div class="projectContentCard">
+                <div class="cardContent animateOnScrollVertical">
+                    <div class="cardText">
+                        <h1>Magnolia -AI Shopping Assistant</h1>
+                        <p>For my senior capstone project at UTC, I worked alongside a group to build an AI shopping assistant
+                             app sponsored by <a href="https://www.capgemini.com/us-en/" target="_blank">Capgemini</a> which aimed 
+                            at streamlining the shopping process by providing the ability to create lists with AI assistance and for 
+                            real-time directions with the most efficient route and location of store items.
+                        </p>
+                        <p>Other features include Google Authentication, product sorting by category, as well as the ability to edit username.</p>
+                        <p>The app was built using React Native, Tailwind CSS, OpenAI GPT, and Appwrite.</p>
+                        <p>
+                            <a href="https://github.com/SMT02/Magnolia" target="_blank">GitHub Repository Link 
+                                <img class="linkArrow" src="icons/right-arrow.png" width="13px"></a> 
+                        </p>
+                    </div>            
+                </div>
+            </div>
+
+            <!-- Image grid -->
+            <div class="imageGridMagnolia">
+                <div class="gridImgWrapper animateOnScroll">
+                    <img src="img/Magnolia2.png" onclick="openModal();currentSlide(1)">
+                </div>
+                <div class="gridImgWrapper animateOnScroll">
+                    <img src="img/Magnolia3.png" onclick="openModal();currentSlide(2)">
+                </div>
+                <div class="gridImgWrapper animateOnScrollRight">
+                    <img src="img/Magnolia4.png" onclick="openModal();currentSlide(3)">
+                </div>
+                <div class="gridImgWrapper animateOnScrollRight">
+                    <img src="img/Magnolia5.png" onclick="openModal();currentSlide(4)">
+                </div>
+            </div>
+        </div>
+
+        <!-- Image modal -->
+        <div id="imageModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+          
+              <div class="mySlides">
+                <img src="img/Magnolia2.png" style="width:35%">
+              </div>
+          
+              <div class="mySlides">
+                <img src="img/Magnolia3.png" style="width:35%">
+              </div>
+          
+              <div class="mySlides">
+                <img src="img/Magnolia4.png" style="width:35%">
+              </div>
+              
+              <div class="mySlides">
+                <img src="img/Magnolia5.png" style="width:35%">
+              </div>
+              
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+            </div>
+        </div>
+    
+</body>
+</html>

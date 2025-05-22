@@ -1,0 +1,123 @@
+<!-- Sean Tiner 2025 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sean Tiner Porfolio</title>
+        <link rel="icon" type="image/x-icon" href="img/ST Logo Round(no lines).png" />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <!-- Top navbar -->
+        <div class="topNav">
+            <div class="logoContainer">
+                <a href="index.html"><img src="img/ST Logo Round.png" width="250px"></a>
+            </div>
+
+            <div class="hamburgerContainer">
+                <a class="navHamburger"> 
+                    <span class="navHamburgerLine"></span>
+                    <span class="navHamburgerLine"></span>
+                    <span class="navHamburgerLine"></span>
+                </a>
+            </div>
+            <div class="navMenu" id="navMenu">
+                <ul>
+                  <li class="navMenuLink"><a href="index.html">Home</a></li>
+                  <li class="navMenuLink"><a href="magnolia.html">Project: Magnolia</a></li>
+                  <li class="navMenuLink"><a href="elysian.html">Project: Elysian Furnishings</a></li>
+                  <li class="navMenuLinkActive"><a href="mc.html">Project: Minecraft Cities</a></li>
+                  <li class="navMenuLink"><a href="desert wear.html">Project: Desert Wear</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Progress bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div> 
+
+        <!-- Splash image -->
+        <div class="splashImageContainer">
+            <img class="splashImage" src="img/MC1.png">
+        </div>
+        
+        <!-- Project card -->
+        <div class="mainContent">
+            <div class="projectContentCard">
+                <div class="cardContent animateOnScrollVertical">
+                    <div class="cardText">
+                        <h1>Minecraft Cities -Creative World Portfolio</h1>
+                        <p>This is a personal project that highlights some of the builds in my creative world in modded Minecraft. 
+                            As a whole the projects are the result of hundreds of hours of work.
+                        </p>
+                        <p>The images seen throughout the site are all in-game screenshots.</p>
+                        <p>This project was built with HTML, Bootstrap CSS, and JavaScript.</p>
+                        <p>
+                            <a href="https://github.com/SMT02/Minecraft-Cities" target="_blank">GitHub Repository Link 
+                                <img class="linkArrow" src="icons/right-arrow.png" width="13px"></a> 
+                        </p>
+                    </div>                    
+                </div>
+            </div>
+
+            <!-- Image grid -->
+            <div class="imageGrid">
+                <div class="gridImgWrapper animateOnScroll">
+                    <img src="img/MC2.png" onclick="openModal();currentSlide(1)">
+                </div>
+                <div class="gridImgWrapper animateOnScroll">
+                    <img src="img/MC3.png" onclick="openModal();currentSlide(2)">
+                </div>
+                <div class="gridImgWrapper animateOnScrollRight">
+                    <img src="img/MC4.png" onclick="openModal();currentSlide(3)">
+                </div>
+                <div class="gridImgWrapper animateOnScrollRight">
+                    <img src="img/MC5.png" onclick="openModal();currentSlide(4)">
+                </div>
+            </div>
+        </div>
+
+        <!-- Image modal -->
+        <div id="imageModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+          
+              <div class="mySlides">
+                <img src="img/MC2.png" style="width:100%">
+              </div>
+          
+              <div class="mySlides">
+                <img src="img/MC3.png" style="width:100%">
+              </div>
+          
+              <div class="mySlides">
+                <img src="img/MC4.png" style="width:100%">
+              </div>
+              
+              <div class="mySlides">
+                <img src="img/MC5.png" style="width:100%">
+              </div>
+              
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+          
+              <div class="modalColumn">
+                <img class="demo cursor" src="img/MC2.png" style="width:100%" onclick="currentSlide(1)">
+              </div>
+              <div class="modalColumn">
+                <img class="demo cursor" src="img/MC3.png" style="width:100%" onclick="currentSlide(2)">
+              </div>
+              <div class="modalColumn">
+                <img class="demo cursor" src="img/MC4.png" style="width:100%" onclick="currentSlide(3)">
+              </div>
+              <div class="modalColumn">
+                <img class="demo cursor" src="img/MC5.png" style="width:100%" onclick="currentSlide(4)">
+              </div>
+            </div>
+        </div>
+    
+</body>
+</html>

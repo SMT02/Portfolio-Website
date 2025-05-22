@@ -1,0 +1,228 @@
+<!-- Sean Tiner 2025 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sean Tiner Porfolio</title>
+        <link rel="icon" type="image/x-icon" href="img/ST Logo Round(no lines).png" />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <!-- Top navbar -->
+        <div class="topNav">
+            <div class="logoContainer">
+                <a href="index.html"><img src="img/ST Logo Round.png" width="250px"></a>
+            </div>
+
+            <div class="hamburgerContainer">
+                <a class="navHamburger"> 
+                    <span class="navHamburgerLine"></span>
+                    <span class="navHamburgerLine"></span>
+                    <span class="navHamburgerLine"></span>
+                </a>
+            </div>
+            <div class="navMenu" id="navMenu">
+                <ul>
+                  <li class="navMenuLinkActive"><a href="index.html">Home</a></li>
+                  <li class="navMenuLink"><a href="magnolia.html">Project: Magnolia</a></li>
+                  <li class="navMenuLink"><a href="elysian.html">Project: Elysian Furnishings</a></li>
+                  <li class="navMenuLink"><a href="mc.html">Project: Minecraft Cities</a></li>
+                  <li class="navMenuLink"><a href="desert wear.html">Project: Desert Wear</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Progress bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>  
+
+        <!-- Side nav -->
+        <div class="sideNav">
+            <a href="#about" class="sideNavButton" id="sideNavAbout"><img src="icons/AccountIcon.png" width="25px"></a>
+            <a href="#education" class="sideNavButton" id="sideNavEducation"><img src="icons/Education (Grey).png" width="25px"></a>
+            <a href="#projects" class="sideNavButton" id="sideNavProjects"><img src="icons/codeLogo.png" width="25px"></a>
+            <a href="#contact" class="sideNavButton" id="sideNavContact"><img src="icons/Mail (Grey).png" width="25px"></a>
+        </div>
+
+        <!-- About card -->
+        <div class="mainContent animateOnScroll" id="about">
+            <div class="profileContentCard">
+                <div class="cardContent">
+                    <img class="portrait" src="img/portrait.jpg">
+                    <div class="cardText">
+                        <h1>About</h1>
+                        <p>As a recent graduate from the University of Tennessee at Chattanooga and 
+                            an aspiring developer with an interest in front-end design, 
+                            I hope to one day make great impact on people's lives by designing and building
+                            engaging websites and applications.
+                        </p>
+                        <p>Born and raised in Chattanooga Tennessee, I have always possessed a passion for 
+                            aesthetics whether in art, video games, or programming.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="wideContent" id="education">
+            <div class="cardTextWide animateOnScrollVertical">
+                <div class="headerWithIcon">
+                    <h1>Education</h1>
+                    <img src="icons/educationIcon.png" width="40px" height="40px">
+                </div>
+                <div class="headerWithIcon">
+                    <img src="icons/rightArrowGreen.png" width="30px">
+                    <p>Major: Bachelor of Science: Computer Science: Software Systems</p>
+                </div>
+                <div class="headerWithIcon">
+                    <img src="icons/rightArrowGreen.png" width="30px">
+                    <p>School: University of Tennessee at Chattanooga</p>
+                </div>
+                <div class="headerWithIcon">
+                    <img src="icons/rightArrowGreen.png" width="30px">
+                    <p>Minor: Economics</p>
+                </div>
+                <div class="headerWithIcon">
+                    <img src="icons/rightArrowGreen.png" width="30px">
+                    <p>GPA: 4.0</p>
+                </div>
+                <div class="headerWithIcon">
+                    <img src="icons/rightArrowGreen.png" width="30px">
+                    <p>2024 Dean’s Undergraduate High GPA Merit Award</p>
+                </div> 
+                
+            </div>
+        </div>
+
+        
+
+        <!-- Projects -->
+        <div class="mainContent" id="projects">
+            <h1 class="header">-Projects-</h1>
+            <!-- Magnolia project card -->
+            <div class="contentCardRight animateOnScroll">
+                <div class="cardContent">
+                    <img class="cardImageMagnolia" src="img/Magnolia1.png">
+                    <div class="cardText">
+                        <h1>Magnolia -AI Shopping Assistant</h1>
+                        <p>For my senior capstone project at UTC, I worked alongside a group to build an AI shopping assistant
+                             app sponsored by <a href="https://www.capgemini.com/us-en/" target="_blank">Capgemini</a> which aimed 
+                            at streamlining the shopping process by providing the ability to create lists with AI assistance and for 
+                            real-time directions with the most efficient route.
+                        </p>
+                        <p>The app was built using React Native, Tailwind CSS, OpenAI GPT, and Appwrite.</p>
+                        <p><a href="magnolia.html">Learn More <img class="linkArrow" src="icons/right-arrow.png" width="13px"></a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elysian project card -->
+            <div class="contentCardLeft animateOnScrollRight">
+                <div class="cardContent">
+                    <img class="cardImage" src="img/Elysian1.png">
+                    <div class="cardText">
+                        <h1>Elysian Furnishings -Premium Furniture Store</h1>
+                        <p>Elysian Furnishings was a group project at UTC which employed
+                            React, HTML, CSS, and MySQL to create a premium online furniture store where users
+                            could view products, create an account and add items to wishlist and cart, and leave reviews.
+                        </p>
+                        <p> Other features include a light/dark mode and the ability for vendors to create
+                            an account and upload products.
+                        </p>
+                        <p><a href="elysian.html">Learn More <img class="linkArrow" src="icons/right-arrow.png" width="13px"></a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MC project card -->
+            <div class="contentCardRight animateOnScroll">
+                <div class="cardContent">
+                    <img class="cardImage" src="img/MC1.png">
+                    <div class="cardText">
+                        <h1>Minecraft Cities -Creative World Portfolio</h1>
+                        <p>This is a personal project that highlights some of the builds in my creative world in modded Minecraft. 
+                            As a whole the projects are the result of hundreds of hours of work.
+                        </p>
+                        <p>This project was built with HTML, Bootstrap CSS, and JavaScript.</p>
+                        <p><a href="mc.html">Learn More <img class="linkArrow" src="icons/right-arrow.png" width="13px"></a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desert Wear project card -->
+            <div class="contentCardLeft animateOnScrollRight">
+                <div class="cardContent">
+                    <img class="cardImage" src="img/Desertwear1.png">
+                    <div class="cardText">
+                        <h1>Desert Wear -Outdoor Apparel Store</h1>
+                        <p>Desert Wear was the result of a highschool final group project. It is an
+                            outdoor apparel-themed online store created with HTML, Bootstrap CSS, and JavaScript.
+                        </p>
+                        <p><a href="desert wear.html">Learn More <img class="linkArrow" src="icons/right-arrow.png" width="13px"></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact">
+            <div class="wideContent">
+                <!-- Skills -->
+                <div class="cardTextWide  animateOnScrollVertical">
+                    <div class="headerWithIcon">
+                        <h1>Technical Skills</h1>
+                        
+                    </div>
+                    <div class="twoColumnText">
+                        <p>HTML<br>CSS<br>JavaScript<br>React</p>
+                        <p>Java<br>Python<br>SQL</p>
+                    </div>
+                </div>
+            </div>
+    
+                <!-- Contact -->
+                <div class="contactInformationContainer  animateOnScrollVertical">
+                    <h1 class="header">-Contact-</h1>
+                    
+                    <div class="contactContent">
+                        <img src="icons/Location (Grey).png" width="40px" height="40px">
+                        <div class="cardText">
+                            <h1 class="contactContentText">Location</h1>
+                            <p class="contactContentText">Soddy Daisy, Tennessee</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contactContent">
+                        <img src="icons/Mail (Grey).png" width="40px" height="40px">
+                        <div class="cardText">
+                            <h1 class="contactContentText">Email</h1>
+                            <p class="contactContentText">sean.tiner02@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contactContent">
+                        <img src="icons/codeLogo.png" width="40px" height="40px">
+                        <div class="cardText">
+                            <h1 class="contactContentText">GitHub</h1>
+                            <p class="contactContentText"><a href="https://github.com/SMT02" target="_blank">Link to my GitHub<img class="linkArrow" src="icons/right-arrow.png" width="13px"></a></p>
+                        </div>
+                    </div>
+
+                    <div class="contactContent">
+                        
+                        <div class="cardText">
+                            <h1 class="contactContentText">LinkedIn</h1>
+                            <p class="contactContentText"><a href="https://www.linkedin.com/in/sean-tiner-4ab283354/" target="_blank">Link to my LinkedIn page<img class="linkArrow" src="icons/right-arrow.png" width="13px"></a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+        </div>
+        
+
+
+    </body>
+</html>
