@@ -76,6 +76,36 @@ document.addEventListener("DOMContentLoaded", () => {
   animation_elements.forEach(el => {
     observer.observe(el);
   });
+
+  animation_elements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('animate');
+      observer.unobserve(el);
+    }
+  }); 
+  
+  // Scroll event fallback to catch elements missed by observer
+  function onScrollCheck() {
+    animation_elements.forEach(el => {
+      if (!el.classList.contains('animate')) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('animate');
+          observer.unobserve(el);
+        }
+      }
+    });
+
+    // Remove scroll listener if all animated
+    const remaining = Array.from(animation_elements).some(el => !el.classList.contains('animate'));
+    if (!remaining) {
+      window.removeEventListener('scroll', onScrollCheck);
+    }
+  }
+
+  window.addEventListener('scroll', onScrollCheck);
+  
 });
 // Animations end -----------------------------------------------------------------------------------------------------------------
 
