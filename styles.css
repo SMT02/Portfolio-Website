@@ -7,6 +7,10 @@ body, html {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     overflow-y: scroll; /* Reserves space for scrollbar so the logo doesn't shift on small pages */
     scroll-behavior: smooth;
@@ -29,6 +33,16 @@ html {
     z-index: 100;
 }
 
+.logoImg {
+    width: 250px;
+}
+
+@media only screen and (max-width: 300px) {
+    .logoImg {
+        width: 150px;
+    }
+}
+
 .topNav {
     position: sticky;
     top: 0;
@@ -42,22 +56,19 @@ html {
 
 .navHamburger {
     position: absolute;
-    bottom: 37px;
+    bottom: 40px;
     right: 45px;
-    width: 1.875rem;
-    height: 1.313rem;
+    width: 50px;
+    height: 50px;
     display: flex; 
     flex-direction: column;
     justify-content: space-between;
     z-index: 120;
-    border-radius: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 13px;
-    padding-top: 13px;
+    padding: 10px;
     background-color: transparent;
     overflow: hidden;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 .navHamburger:before {
@@ -81,16 +92,17 @@ html {
 }
 
 .navHamburgerLine {
-    height: 0.188rem;
+    height: 4px;
     width: 100%;
     background-color: #ffffff; 
     border-radius: 0.625rem;
     transition: all ease-in-out 0.2s;
     z-index: 2;
+    transform-origin: center;
 }
 
 .navHamburger.active .navHamburgerLine:nth-child(1) {
-    transform: rotate(45deg) translate(0.5rem, 0.25rem);
+    transform: translateY(13px) rotate(45deg);
 }
 
 .navHamburger.active .navHamburgerLine:nth-child(2) {
@@ -98,7 +110,14 @@ html {
 }
 
 .navHamburger.active .navHamburgerLine:nth-child(3) {
-    transform: rotate(-45deg) translate(0.5rem, -0.25rem);
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+
+@media only screen and (max-width: 300px) {
+    .navHamburger {
+        right: 10px;
+    }
 }
 
 .navMenu {
@@ -252,16 +271,22 @@ html {
 
 /* Profile and project content cards ------------------------------------------------------------------------------------------ */
 .mainContent {
-    width: 90%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
 	overflow-x: hidden;
 }
 
+@media only screen and (max-width: 300px) {
+    .mainContent {
+        width: 90%;
+    }
+}
+
 .profileContentCard {
     background-image: linear-gradient(to bottom right, #dffbdd, #c4efbf);
     border-radius: 55px;
-    width: 60%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
@@ -272,7 +297,6 @@ html {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-        
     }
 }
 
@@ -298,11 +322,13 @@ html {
     padding: 30px;
     display: flex; 
     flex-direction: row;
+    width: 100%;
 }
 
 @media only screen and (max-width: 980px) {
     .cardContent {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -357,6 +383,16 @@ html {
     align-items: center;
     font-size: 18px;
 }
+
+@media only screen and (max-width: 300px) {
+    .cardText {
+        font-size: 12px;
+    }
+
+     .cardTextWide {
+        font-size: 12px;
+    }
+}
 /* Profile and project content cards end ------------------------------------------------------------------------------------------ */
 
 /* Images ----------------------------------------------------------------------*/
@@ -369,28 +405,24 @@ html {
 }
 
 .cardImage {
-    
-    max-width: 600px;
-    width: 100%;
+    width: 60%;
     height: auto;  
-    margin-right: 20px;
-    margin-left: 20px;
+    margin: 20px;
     object-fit: contain;
 }
 
+
 @media only screen and (max-width: 980px) {
     .cardImage {
-        margin-left: 0;
+        width: 100%;
     }
-}
+} 
 
 .cardImageMagnolia {
-    
     max-width: 200px;
     width: 100%;
     height: auto;  
-    margin-right: 20px;
-    margin-left: 20px;
+    margin: 20px;
     object-fit: contain;
 }
 
@@ -595,8 +627,9 @@ html {
 .contentCardRight {
     background-image: linear-gradient(to bottom right, #dffbdd, #c4efbf);
     border-radius: 55px;
-    width: 60%;
-    margin-left: 40%;
+    width: 80%;
+    min-height: 45vh;
+    margin-left: 20%;
     margin-right: auto;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -605,9 +638,10 @@ html {
 .contentCardLeft {
     background-image: linear-gradient(to bottom right, #dffbdd, #c4efbf);
     border-radius: 55px;
-    width: 60%;
+    width: 80%;
+    min-height: 45vh;
     margin-left: auto;
-    margin-right: 40%;
+    margin-right: 50%;
     margin-top: 40px;
     margin-bottom: 40px;
 }
