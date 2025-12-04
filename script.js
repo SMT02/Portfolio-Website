@@ -13,9 +13,9 @@ hamburger.addEventListener("click", () => {
 window.onscroll = function() {scrollBar()};
 
 function scrollBar() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 // Progress Bar End -----------------------------------------------------------------------------------------------------------------
@@ -118,7 +118,7 @@ function closeModal() {
   document.getElementById("imageModal").style.display = "none";
 }
 
-var slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -130,10 +130,10 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  //let captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -144,7 +144,7 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "flex";
   dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+  //captionText.innerHTML = dots[slideIndex-1].alt;
 }
 // Modal End -----------------------------------------------------------------------------------------------------------------
 
